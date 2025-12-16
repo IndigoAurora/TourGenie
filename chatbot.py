@@ -65,9 +65,9 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Title and Welcome
-st.title("🧭 SmartTour India (Cohere)")
+st.title("🧭 TourGenie")
 st.subheader("Your intelligent travel guide across India 🇮🇳")
-st.markdown("### 🙏 Welcome to SmartTour India!")
+st.markdown("### 🙏 Welcome to TourGenie!")
 st.markdown("Ask about destinations, weather, food, culture, or travel tips across India.")
 
 # Clear Chat

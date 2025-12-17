@@ -1,2 +1,2 @@
 Hey There!
-https://smarttour-india.streamlit.app/
+https://tourgenie.streamlit.app/

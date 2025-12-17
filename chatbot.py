@@ -19,7 +19,7 @@ cohere_api_key = st.secrets["COHERE_API_KEY"]
 co = cohere.Client(cohere_api_key)
 
 # Set page config
-st.set_page_config(page_title="SmartTour India", page_icon="🧭")
+st.set_page_config(page_title="TourGenie", page_icon="🧭")
 
 # Get screen width
 components.html("""
@@ -139,7 +139,7 @@ with st.form(key="chat_form", clear_on_submit=True):
 
 if submit_button and user_input:
     st.session_state.chat_history.append({"role": "User", "message": user_input})
-    with st.spinner("🤖 SmartTour is typing..."):
+    with st.spinner("🤖 TourGenie is typing..."):
         response = co.chat(
             model="command-nightly",
             message=user_input,
@@ -167,7 +167,7 @@ for i in range(0, len(chat_pairs), 2):
 st.markdown("## 🗨️ Conversation:")
 for idx, (user_msg, bot_msg) in enumerate(paired[::-1]):
     st.markdown(f"<div class='chat-bubble chat-user'>🧑 You: {user_msg['message']}</div>", unsafe_allow_html=True)
-    st.markdown(f"<div class='chat-bubble chat-bot'>🤖 SmartTour: {bot_msg['message']}</div>", unsafe_allow_html=True)
+    st.markdown(f"<div class='chat-bubble chat-bot'>🤖 TourGenie: {bot_msg['message']}</div>", unsafe_allow_html=True)
 
     st.markdown("Was this helpful?")
     col1, col2, col3 = st.columns(3)
